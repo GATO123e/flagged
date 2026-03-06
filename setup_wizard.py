@@ -295,7 +295,7 @@ def setup_google_credentials(base_dir: Path):
 def setup_accounts(base_dir: Path, creds_path: str):
     section("Gmail Account Setup")
     info("Add the Gmail accounts you want Flagged to monitor.")
-    info("Each account gets a short label (e.g. Main, Stackit, Media).")
+    info("Each account gets a short label (e.g. Main, Work, Media).")
     print()
 
     accounts = []
@@ -403,7 +403,7 @@ def setup_macos_service(base_dir: Path):
             content = f.read()
         # Replace placeholder path with actual path
         content = content.replace(
-            "/Users/stack/email_monitor",
+            "/Users/YOUR_USERNAME/email_monitor",
             str(base_dir)
         )
         with open(plist_src, "w") as f:

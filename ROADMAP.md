@@ -74,7 +74,7 @@ Action: Creates Google Calendar event, sends Telegram confirmation
 You tap confirm. Done.
 
 **3. Standard inquiry response**
-Triggered by: recognized email patterns (Stackit.ai questions, media kit requests, partnership intros)
+Triggered by: recognized email patterns (product questions, media kit requests, partnership intros)
 Action: Pulls matching response template, personalizes the opener
 Templates you write once, agent uses forever
 
@@ -95,7 +95,7 @@ Template categories to build:
 - Meeting / calendar request response
 - Event invite acceptance
 - Event invite decline  
-- Stackit.ai partnership inquiry
+- Partnership inquiry
 - Media / press inquiry
 - Speaking / podcast request
 - General "not right now" decline
@@ -138,7 +138,7 @@ THEN send template response automatically
 ### Context enrichment (runs before every alert)
 Before alerting you on a high-score email, the agent:
 - Searches the sender's name + company
-- Checks if they've mentioned Flagged, Stackit.ai, or your name publicly
+- Checks if they've mentioned Flagged or your name publicly
 - Pulls their Twitter/LinkedIn summary
 - Includes a 2-line brief in the Telegram alert
 

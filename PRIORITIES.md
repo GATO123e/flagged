@@ -1,4 +1,4 @@
-# Stack's Email Priority Context
+# Your Email Priority Context
 # ─────────────────────────────────────────────────────────────────────────────
 # This file is injected into every email classification prompt.
 # Edit it to tune what gets surfaced to you. This IS committed to GitHub
@@ -6,10 +6,9 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 ## Who I Am
-I am Stack — a creative entrepreneur building at the intersection of AI, crypto,
-and media. My active projects are Stackit.ai (BTC/ETH treasury management for
-founders and AI-native businesses) and Navo (video creation with Remotion).
-I have a YouTube live streaming presence and I build in public.
+I am a creative entrepreneur building at the intersection of AI, crypto,
+and media. I run multiple projects and build in public.
+Edit this section to describe who you are and what you're working on.
 
 ## Raise to 9-10 (Drop everything)
 - Event invites with an RSVP deadline or calendar attachment
@@ -30,8 +29,8 @@ I have a YouTube live streaming presence and I build in public.
 - Requests for a call or meeting from a specific named person
 - Legal or compliance notices
 - Anything from a .eth address or known crypto founder
-- Stackit.ai user inquiries or onboarding questions
-- Navo-related developer outreach
+- User inquiries or onboarding questions for your projects
+- Developer outreach related to your products
 
 ## Raise to 5-6 (Check when you have time)
 - Interesting project announcements or product launches in AI/crypto

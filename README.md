@@ -178,7 +178,7 @@ From: founder@coolproject.xyz
 Subject: Collab idea — would love to chat
 Score: 8/10 — Direct personal outreach, specific ask, no template language
 
-"Hey, I've been following your work on Stackit and wanted to..."
+"Hey, I've been following your work and wanted to..."
 ```
 
 Emoji legend:

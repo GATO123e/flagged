@@ -24,9 +24,9 @@
       "token_path": "token_main.pkl"
     },
     {
-      "label": "Stackit",
+      "label": "Work",
       "credentials_path": "credentials.json",
-      "token_path": "token_stackit.pkl"
+      "token_path": "token_work.pkl"
     },
     {
       "label": "Media",

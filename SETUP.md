@@ -85,9 +85,9 @@ A browser window opens for each Gmail account asking you to sign in and grant re
 ## Step 7 — Run as Background Service (Always On)
 
 ```bash
-# Update the path in the plist if your username isn't 'stack'
+# Update the path in the plist to match your actual install location
 nano com.flagged.emailmonitor.plist
-# Change /Users/stack/email_monitor to your actual path
+# Change /Users/YOUR_USERNAME/email_monitor to your actual path
 
 # Install and start
 cp com.flagged.emailmonitor.plist ~/Library/LaunchAgents/
@@ -97,7 +97,7 @@ launchctl start com.flagged.emailmonitor
 
 **Check it's running:**
 ```bash
-launchctl list | grep stack
+launchctl list | grep flagged
 ```
 
 **Restart after config changes:**

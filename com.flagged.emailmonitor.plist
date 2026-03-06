@@ -9,11 +9,11 @@
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/python3</string>
-        <string>/Users/stack/flagged/flagged.py</string>
+        <string>/Users/YOUR_USERNAME/flagged/flagged.py</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/stack/flagged</string>
+    <string>/Users/YOUR_USERNAME/flagged</string>
 
     <key>RunAtLoad</key>
     <true/>
@@ -22,10 +22,10 @@
     <true/>
 
     <key>StandardOutPath</key>
-    <string>/Users/stack/flagged/monitor_stdout.log</string>
+    <string>/Users/YOUR_USERNAME/flagged/monitor_stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/stack/flagged/monitor_stderr.log</string>
+    <string>/Users/YOUR_USERNAME/flagged/monitor_stderr.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
