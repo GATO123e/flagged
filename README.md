@@ -10,7 +10,7 @@
 ---
 
 > *"I missed an Arbitrum event invite because it was buried in 300 unread emails. I built this so it never happens again."*
-> — Stack ([@MSanchezWorld](https://github.com/MSanchezWorld))
+> — [@msanchezworld](https://github.com/MSanchezWorld)
 
 ---
 
@@ -205,10 +205,9 @@ Ideas for contributions:
 
 ## Built By
 
-Flagged was built by **Stack** — a creative entrepreneur building at the intersection of AI, crypto, and media.
+Flagged was built by **[@msanchezworld](https://github.com/MSanchezWorld)** — building at the intersection of AI, crypto, and media.
 
-- 🌐 [Stackit.ai](https://flagged.email) — BTC/ETH treasury management for AI-native businesses
-- 🐦 Follow the build in public: [@MSanchezWorld](https://twitter.com/MSanchezWorld)
+- 🐦 Follow the build in public: [@msanchezworld](https://twitter.com/msanchezworld)
 - 📺 Live coding & AI experiments on YouTube
 
 ---

@@ -62,4 +62,4 @@ Open an issue with:
 
 ## Questions
 
-Open a Discussion on GitHub or reach out to [@MSanchezWorld](https://twitter.com/MSanchezWorld).
+Open a Discussion on GitHub or reach out to [@msanchezworld](https://twitter.com/msanchezworld).
