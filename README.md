@@ -71,19 +71,19 @@ Flagged is built local-first by design:
 
 **Mac / Linux — one line:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/MSanchezWorld/flagged/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Massideation/flagged/main/install.sh | bash
 ```
 
 **Windows — one line (PowerShell):**
 ```powershell
-irm https://raw.githubusercontent.com/MSanchezWorld/flagged/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Massideation/flagged/main/install.ps1 | iex
 ```
 
 The installer clones the repo, installs dependencies, and launches an **interactive setup wizard** that walks you through every step — Telegram bot, Gmail API, model selection, and background service — no manual config editing required.
 
 **Manual install:**
 ```bash
-git clone https://github.com/MSanchezWorld/flagged
+git clone https://github.com/Massideation/flagged
 cd flagged
 pip install -r requirements.txt
 python setup_wizard.py

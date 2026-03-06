@@ -1,6 +1,6 @@
 #!/bin/bash
 # Flagged Installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/MSanchezWorld/flagged/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/Massideation/flagged/main/install.sh | bash
 
 set -e
 
@@ -30,7 +30,7 @@ echo -e "${GOLD}${BOLD}  ██║  ██║███████╗██║  
 echo -e "${GOLD}${BOLD}  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═════╝ ${RESET}"
 echo ""
 echo -e "  ${BOLD}Local AI Email Monitor${RESET} — Installer"
-echo -e "  ${DIM}github.com/MSanchezWorld/flagged${RESET}"
+echo -e "  ${DIM}github.com/Massideation/flagged${RESET}"
 echo ""
 
 # ── Check OS ──────────────────────────────────────────────────────────────────
@@ -91,7 +91,7 @@ else
   # Clone the repo
   echo ""
   info "Cloning Flagged into $INSTALL_DIR..."
-  git clone https://github.com/MSanchezWorld/flagged "$INSTALL_DIR" --quiet
+  git clone https://github.com/Massideation/flagged "$INSTALL_DIR" --quiet
   ok "Flagged cloned"
 fi
 
@@ -127,5 +127,5 @@ fi
 
 echo ""
 echo -e "  ${GREEN}${BOLD}Flagged installed at: $INSTALL_DIR${RESET}"
-echo -e "  ${DIM}Docs: github.com/MSanchezWorld/flagged${RESET}"
+echo -e "  ${DIM}Docs: github.com/Massideation/flagged${RESET}"
 echo ""

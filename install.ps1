@@ -1,5 +1,5 @@
 # Flagged Installer for Windows
-# Usage: irm https://raw.githubusercontent.com/MSanchezWorld/flagged/main/install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/Massideation/flagged/main/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
@@ -12,7 +12,7 @@ function Write-Step($msg) { Write-Host "`n── $msg ────────�
 # Banner
 Write-Host ""
 Write-Host "  FLAGGED — Local AI Email Monitor" -ForegroundColor Yellow
-Write-Host "  github.com/MSanchezWorld/flagged" -ForegroundColor DarkGray
+Write-Host "  github.com/Massideation/flagged" -ForegroundColor DarkGray
 Write-Host ""
 
 # Check Python
@@ -54,7 +54,7 @@ if (Test-Path "$installDir\.git") {
     }
 } else {
     Write-Info "Cloning Flagged into $installDir..."
-    git clone https://github.com/MSanchezWorld/flagged $installDir --quiet
+    git clone https://github.com/Massideation/flagged $installDir --quiet
     Write-Ok "Flagged cloned"
 }
 
@@ -80,5 +80,5 @@ if (-not $startWizard -or $startWizard -match "^[Yy]") {
 
 Write-Host ""
 Write-Ok "Flagged installed at: $installDir" 
-Write-Host "  Docs: github.com/MSanchezWorld/flagged" -ForegroundColor DarkGray
+Write-Host "  Docs: github.com/Massideation/flagged" -ForegroundColor DarkGray
 Write-Host ""

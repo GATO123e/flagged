@@ -2,7 +2,7 @@
 ## From Email Monitor to Autonomous Email Agent
 
 **Domain:** flagged.email  
-**Repo:** github.com/MSanchezWorld/flagged  
+**Repo:** github.com/Massideation/flagged  
 **Core principle:** Test first, earn trust, then automate. Never give an agent permissions you haven't watched it earn.
 
 ---
@@ -189,7 +189,7 @@ GLM-4.7 already supports tool-use / function calling — the model can handle al
 
 ## Launch Sequence
 
-1. ✅ **Now** — Push v1 to github.com/MSanchezWorld/flagged
+1. ✅ **Now** — Push v1 to github.com/Massideation/flagged
 2. **Week 1-2** — Run it yourself, tune PRIORITIES.md, collect response templates
 3. **Week 3-4** — Post launch on Twitter/X, r/LocalLLaMA, ProductHunt
 4. **Month 2** — Build Stage 2 supervised actions (calendar link + template responses first)
